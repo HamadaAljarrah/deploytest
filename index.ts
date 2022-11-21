@@ -1,12 +1,12 @@
-import express, { json, urlencoded } from "express"
+import express, { Request, Response } from "express"
 
 const app = express();
-app.use(json());
-app.use(urlencoded({ extended: true }));
+app.use(express.json());
+app.use(express.urlencoded({ extended: true }));
 
 
 
-app.get("/", (req, res) => { res.json({ message: "Hello from the server" }) });
+app.get("/", (req:Request, res:Response) => { res.json({ message: "Hello from the server" }) });
 const USERS = [
     {
         name: "Hamada",
@@ -21,7 +21,7 @@ const USERS = [
         email: "Taqaung@gmail.com"
     },
 ]
-app.get("/users", (req, res) => res.json({ data: USERS }))
+app.get("/users", (req: Request, res: Response) => res.json({ data: USERS }))
 
 const port = process.env.PORT || 8080
 
