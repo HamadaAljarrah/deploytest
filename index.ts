@@ -6,7 +6,7 @@ app.use(express.urlencoded({ extended: true }));
 
 
 
-app.get("/", (req:Request, res:Response) => { res.json({ message: "Hello from the server" }) });
+app.get("/test", (req:Request, res:Response) => { res.json({ message: "Hello from the server" }) });
 const USERS = [
     {
         name: "Hamada",
