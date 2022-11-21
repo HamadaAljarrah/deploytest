@@ -23,6 +23,6 @@ const USERS = [
 ]
 app.get("/users", (req, res) => res.json({ data: USERS }))
 
-const port = process.env.PORT || 5000
+const port = process.env.PORT || 8080
 
-app.listen(port, () => console.log("listning to port* 5000"));
+app.listen(port, () => console.log("listning to port* 4000"));
